@@ -145,12 +145,17 @@ function checaAnoBissexto(ano) {
   let multiploDeQuatro = ano%4===0 
   let multiploDeCem = ano%100===0
   conferir = multiploDeQuatrocentos || (multiploDeQuatro && !multiploDeCem)
-  
   return conferir
 }
 
 // EXERCÍCIO 15
 function checaValidadeInscricaoLabenu() {
-  // implemente sua lógica aqui
+  let maioridade = prompt("Você tem mais de 18 anos?(responda com 'sim' ou 'não')")
+  const ensino = prompt("Você possui ensino médio completo?")
+  let disponibilidade = prompt("Você possui disponibilidade exclusiva durante os horários do curso? ")
+ let conferirMaioridade = maioridade==="sim"
+ const conferirEnsino = ensino==="sim"
+ let conferirDisponibilidade = disponibilidade==="sim"
+ console.log(conferirDisponibilidade&&conferirEnsino&&conferirMaioridade)
 
 }
