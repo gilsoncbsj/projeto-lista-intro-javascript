@@ -93,7 +93,9 @@ function retornaPrimeiroElemento(array) {
 
 // EXERCÍCIO 10
 function retornaUltimoElemento(array) {
-  
+  const numeroDeElementos = array.length
+  const ultimoElemento = array [numeroDeElementos-1]
+  return ultimoElemento
 
 }
 
