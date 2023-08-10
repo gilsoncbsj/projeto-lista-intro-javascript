@@ -18,91 +18,144 @@ function imprimeMensagem() {
 
 // EXERCÍCIO 01
 function calculaAreaRetangulo() {
-  // implemente sua lógica aqui
+  const altura = +prompt("Digite a altura do retângulo:")
+  const largura = +prompt("Digite a largura do retângulo:")
+  let area = altura*largura
+  console.log(area);
 
-}
+} 
 
 // EXERCÍCIO 02
 function imprimeIdade() {
-  // implemente sua lógica aqui
+  let anoAtual = +prompt("Digite em qual ano estamos:")
+  const anoDeNascimento = +prompt("Digite o ano do seu nascimento:")
+  let idade = anoAtual-anoDeNascimento
+  console.log(idade)
 
 }
 
 // EXERCÍCIO 03
 function calculaIMC(peso, altura) {
-  // implemente sua lógica aqui
+  let imc = peso/(altura*altura)
+  return imc
 
 }
 
 // EXERCÍCIO 04
 function imprimeInformacoesUsuario() {
-  // implemente sua lógica aqui
+  const nome = prompt("Digite o seu nome:")
+  let idade = +prompt("Digite sua idade:")
+  let email = prompt("Digite o seu email:")
+  
+  console.log("Meu nome é " + nome +", tenho "+ idade+ " anos, e o meu email é "+ email+".")
   // "Meu nome é NOME, tenho IDADE anos, e o meu email é EMAIL."
 
 }
 
 // EXERCÍCIO 05
 function imprimeTresCoresFavoritas() {
-  // implemente sua lógica aqui
+  const corUm = prompt("Qual a sua cor favorita?")
+  const corDois = prompt("Qual sua segunda cor favorita?")
+  const corTres = prompt("Qual sua terceira cor favorita?")
+  const coresFavoritas = [corUm, corDois, corTres]
+  console.log(coresFavoritas);
 
 }
 
 // EXERCÍCIO 06
 function retornaStringEmMaiuscula(string) {
-  // implemente sua lógica aqui
-
+  const maiusculo = string.toUpperCase()
+  return maiusculo
 }
 
 // EXERCÍCIO 07
 function calculaIngressosEspetaculo(custo, valorIngresso) {
-  // implemente sua lógica aqui
+  let quantidadeIngressos = custo/valorIngresso
+  return quantidadeIngressos
 
 }
 
 // EXERCÍCIO 08
 function checaStringsMesmoTamanho(string1, string2) {
-  // implemente sua lógica aqui
+  let tamanhoString1 = string1.length
+  let tamanhoString2 = string2.length
+  conferirTamanho = tamanhoString1 === tamanhoString2
+  return conferirTamanho
 
 }
 
 // EXERCÍCIO 09
 function retornaPrimeiroElemento(array) {
-  // implemente sua lógica aqui
+  const primeiroElemento = array[0]
+  return primeiroElemento
 
 }
 
 // EXERCÍCIO 10
 function retornaUltimoElemento(array) {
-  // implemente sua lógica aqui
+  const numeroDeElementos = array.length
+  const ultimoElemento = array [numeroDeElementos-1]
+  return ultimoElemento
 
 }
 
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
-  // implemente sua lógica aqui
+  const primeiroElemento = array[0]
+  const ultimoElemento = array[array.length-1]
+  
+  array.pop()
+  array.push(primeiroElemento)
+
+  array.shift()
+  array.unshift(ultimoElemento)
+
+  return array
 
 }
 
 // EXERCÍCIO 12
 function checaIgualdadeDesconsiderandoCase(string1, string2) {
-  // implemente sua lógica aqui
+  let maiusculoUm = string1.toUpperCase()
+  let maiusculoDois = string2.toUpperCase()
+  let checagem = maiusculoUm===maiusculoDois
+  return checagem
 
 }
 
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
-  // implemente sua lógica aqui
+  let anoAtualUm = +prompt("Qual o ano atual?")
+  const anoNascimento = +prompt("Qual o ano do seu nascimento?")
+  let anoCarteiraIdentidade = +prompt("Qual o ano que foi emitida sua Carteira de Identidade?")
+  let idade = anoAtualUm-anoNascimento
+  let tempoSemTrocarRG = anoAtualUm-anoCarteiraIdentidade
+  
+  let necessidadeRenovacaoUm = (idade<=20) && (tempoSemTrocarRG>=5)
+  let necessidadeRenovacaoDois = (idade>20 && idade<=50) && (tempoSemTrocarRG>=10)
+  let necessidadeRenovacaoTres = (idade>50) && (tempoSemTrocarRG>=15)
+  let renovacao = (necessidadeRenovacaoUm || necessidadeRenovacaoDois || necessidadeRenovacaoTres)
+  console.log(renovacao);
 
 }
 
 // EXERCÍCIO 14
 function checaAnoBissexto(ano) {
-  // implemente sua lógica aqui
-
+  let multiploDeQuatrocentos = ano%400===0
+  let multiploDeQuatro = ano%4===0 
+  let multiploDeCem = ano%100===0
+  conferir = multiploDeQuatrocentos || (multiploDeQuatro && !multiploDeCem)
+  return conferir
 }
 
 // EXERCÍCIO 15
 function checaValidadeInscricaoLabenu() {
-  // implemente sua lógica aqui
+  let maioridade = prompt("Você tem mais de 18 anos?(responda com 'sim' ou 'não')")
+  const ensino = prompt("Você possui ensino médio completo?")
+  let disponibilidade = prompt("Você possui disponibilidade exclusiva durante os horários do curso? ")
+ let conferirMaioridade = maioridade==="sim"
+ const conferirEnsino = ensino==="sim"
+ let conferirDisponibilidade = disponibilidade==="sim"
+ console.log(conferirDisponibilidade&&conferirEnsino&&conferirMaioridade)
 
 }
