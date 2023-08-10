@@ -141,8 +141,12 @@ function checaRenovacaoRG() {
 
 // EXERCÍCIO 14
 function checaAnoBissexto(ano) {
-  // implemente sua lógica aqui
-
+  let multiploDeQuatrocentos = ano%400===0
+  let multiploDeQuatro = ano%4===0 
+  let multiploDeCem = ano%100===0
+  conferir = multiploDeQuatrocentos || (multiploDeQuatro && !multiploDeCem)
+  
+  return conferir
 }
 
 // EXERCÍCIO 15
