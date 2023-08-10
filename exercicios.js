@@ -125,7 +125,17 @@ function checaIgualdadeDesconsiderandoCase(string1, string2) {
 
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
-  // implemente sua lógica aqui
+  let anoAtualUm = +prompt("Qual o ano atual?")
+  const anoNascimento = +prompt("Qual o ano do seu nascimento?")
+  let anoCarteiraIdentidade = +prompt("Qual o ano que foi emitida sua Carteira de Identidade?")
+  let idade = anoAtualUm-anoNascimento
+  let tempoSemTrocarRG = anoAtualUm-anoCarteiraIdentidade
+  
+  let necessidadeRenovacaoUm = (idade<=20) && (tempoSemTrocarRG>=5)
+  let necessidadeRenovacaoDois = (idade>20 && idade<=50) && (tempoSemTrocarRG>=10)
+  let necessidadeRenovacaoTres = (idade>50) && (tempoSemTrocarRG>=15)
+  let renovacao = (necessidadeRenovacaoUm || necessidadeRenovacaoDois || necessidadeRenovacaoTres)
+  console.log(renovacao);
 
 }
 
